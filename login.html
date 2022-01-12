@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    	<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet">
+    	<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/css/paper-dashboard.css">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    	<script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+<body>
+    <main id="site-content" role="main">
+        <header class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                        <figure class="logo">
+                            <a title="Pedidos Rednetcorp" href="" target="_top">
+                                <img src="wp-content/themes/sistema/assets/images/logo-corp-white.png" />
+                            </a>
+                        </figure>
+                    </div>
+     
+                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 text-right">
+                        <ul class="nav" role="tablist">
+                            <li class="active visible-xs">
+                                <a href="#login" class="btn btn-success btn-lg btn-login-mobile" aria-controls="login" data-toggle="modal"><i class="glyphicon glyphicon-log-in"></i> Ingresar</a>
+                            </li>
+                        </ul>
+    
+                        <!--<a href="#login" class="btn btn-default btn-login" data-toggle="modal" data-target="#login"><i class="glyphicon glyphicon-log-in"></i> Ingresar</a>-->
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="grid-login">
+            <div class="container-fluid contenedor">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        
+                        <section class="section-banner-slider" style="position: absolute;height: 100vh;">
+                            <div class="slider">
+                                <div class="item login-slider" style="background-image: url('/assets/images/miami-realestate-1.jpg')">	
+                                </div>
+    
+                                <div class="item login-slider" style="background-image: url('/assets/images/miami-realestate-4.jpg')">	
+                                </div>
+    
+                                <div class="item login-slider" style="background-image: url( '/assets/images/Miami-Real-Estate-3.jpg')">	
+                                </div>
+                            </div>
+                        </section>
+                        <div class="img-de-fondo" style="background-image: url( '/assets/images/miami-realestate-4.jpg')">	
+                        </div>
+                    </div>
+    
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="detail-column">
+                        
+                        <section class="section-content" id="login" tabindex="-1" role="dialog" aria-labelledby="login">
+                            <div class="contenedor-tabla">
+                                <div class="container text-center" style="width: 100%;">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <div class="box-content">
+                                                <div class="visible-xs">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="glyphicon glyphicon-remove"></i></span></button>
+                                                </div>
+    
+                                                <!-- Tab panes -->
+                                                    <div class="tab-content">
+                                                        <div role="tabpanel" class="tab-pane active" id="tab-login">
+    
+                                                            
+    
+                                                            <h1 class="">INGRESO DE CLIENTES</h1>
+    
+                                                            <form id="form-login" method="post" accept-charset="utf-8" action="" name="loginform" autocomplete="off" role="form" class="form-signin">
+    
+                                                                <div id="user_name_div"class="input-group input-group-lg " style="margin-bottom: 10px">
+                                                                    <span class="input-group-addon"><i class="icon-icon-05"></i></span>
+                                                                    <input type="text" id="form-username" name="user_name" class="form-control" placeholder="Nombre de usuario" required value=""/>
+                                                                </div>
+    
+                                                                <div id="user_name_password" class="input-group input-group-lg " style="margin-bottom: 10px">
+                                                                    <span class="input-group-addon"><i class="icon-icon-06"></i></span>
+                                                                    <input type="password" id="form-password" name="user_password" class="form-control" placeholder="Contraseña" required value=""/>
+                                                                </div>
+    
+                                                                
+                                                                <div class="captcha_wrapper " style="margin: 0 0 20px 0;">
+                                                                    <div class="g-recaptcha" style="display:inline-block;" data-sitekey="<?php echo $publickey;?>"></div>
+                                                                </div>
+                                                                
+                                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                                    <button id="log-in" name="login" type="submit" class="btn btn-primary btn-submit " style="position:relative;padding: 15px 40px;">
+                                                                        <span>Iniciar sesión</span>
+                                                                    </button>
+                                                                </div>
+    
+                                                            </form>
+                                                        </div>
+    
+                                                    </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    
+    
+                </div>
+            </div>
+        </div>
+    
+    
+    
+        
+    </main><!-- #site-content -->
+
+    <footer>
+        <script src="( 'js/main.js' );?>"></script>
+    </footer>
+</body>
+</html>

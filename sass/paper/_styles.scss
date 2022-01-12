@@ -1,0 +1,223 @@
+.tab-content{
+    h1{
+        font-size: 1.9em;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        // margin-bottom: 1em;
+        margin-top: 0;
+        color: rgb(0, 0, 0);
+    }
+}
+
+.contenedor{
+    padding: 0px;
+}
+
+.login-slider{
+    height: 100%;
+    background-size: cover;
+    background-position: center;            
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 998;
+}
+
+.section-banner-slider{
+
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(0,0,0,.5);
+    }
+    .slider{
+        position: relative;
+        overflow: hidden;
+    }
+    .slider,.slick-list,.slick-track{
+        height: 100%;
+    }
+}
+
+.header{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .logo{
+        padding: 10px 30px;
+    }
+}
+.logo-empresa{
+    position: relative;
+    width: 50%;
+}
+
+.img-de-fondo{
+    display: none;
+}
+
+form{
+    #user_name_div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        #form-username{
+            width: 80%;
+        }
+        .icon-icon-05{
+            font-size: 1.5em;
+            margin-right: 3px;
+        }
+        span{
+            padding-top: 0.6em;
+            width: 18%;
+        }
+
+    }
+    #user_name_password{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        #form-password{
+            width: 80%;
+        }
+        .icon-icon-06{
+            font-size: 1.6em;
+            margin-right: 3px;
+        }
+        span{
+            padding-top: 0.6em;
+            width: 18%;
+        }
+    }
+}
+
+#detail-column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.modal-body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    div{
+        h2{
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+}
+header{
+    div{
+        .nav{
+            margin-right: 45px;
+        }
+    }
+}
+
+//******************************Home Page Styles*****************************
+
+.img-usuario-container{
+    display: inline;
+    .imagen-usuario{
+        width: 25px;
+    }
+    
+}
+
+#map{
+    height: 500px;
+    width: 100%;
+}
+
+.contenedor-sidebar{
+    height: 100vh;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.header-right-navbar{
+    border-bottom: 1px solid rgba(158, 157, 157, 0.753);
+    border-right: 1px solid rgba(158, 157, 157, 0.753);
+    .contenedor-navbar{
+        margin-bottom: 0px;
+    }
+}
+
+
+
+//mobile
+@include mediaqueries(767max){
+    #detail-column{
+        position: absolute;
+    }
+    .tab-content{
+        h1{
+            color: black;
+        }
+    }
+    .grid-login{
+        .contenedor{
+            &>.row{
+                margin: 0px;
+            }
+        }
+    }
+    .section-banner-slider{
+        display: none;
+    }
+    .img-de-fondo{
+        display: block;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+    }
+    #login{
+        display: none;
+        position: absolute;
+        z-index: 1041;
+        background-color: #fff;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        margin: 0;
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .contenedor-tabla{
+            display: table;
+            width: 100%;
+            height: 100%;
+            &>.container{
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+
+}
+

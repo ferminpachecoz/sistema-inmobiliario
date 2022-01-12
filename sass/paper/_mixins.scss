@@ -1,0 +1,154 @@
+//Utilities 
+
+@import "mixins/transparency";
+@import "mixins/vendor-prefixes";
+
+
+//Components
+
+@import "mixins/buttons";
+@import "mixins/inputs";
+@import "mixins/labels";
+@import "mixins/tabs";
+@import "mixins/navbars";
+@import "mixins/icons";
+@import "mixins/cards";
+@import "mixins/chartist";
+@import "mixins/sidebar";
+
+@mixin border-radius($radius){
+  border-radius:$radius;
+  -webkit-border-radius:$radius;
+  -moz-border-radius:$radius;
+  -ms-border-radius:$radius;
+  -o-border-radius:$radius;
+}
+
+@mixin box-shadow($shadow){
+  -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@function tracking( $target ){
+  @return ($target / 1000) * 1em;
+}
+
+@mixin tracking( $target ){
+  letter-spacing: tracking( $target );
+}
+
+@mixin ie($ie){
+  @if $ie == ie9_up {
+    @media screen and (min-width:0\0){@content;}
+  }
+  @if $ie == ie10_down{
+    @media screen\0{@content;}
+  }
+  @if $ie == ie8_down {
+    @media \0screen\,screen\9{@content;}
+  }
+  @if $ie == ie8_only{
+    @media \0screen{@content;}
+  }
+}
+
+@mixin firefox($firefox){
+  @if $firefox == moz_only{
+    @-moz-document url-prefix(){@content;}
+  }
+}
+
+@mixin safari($safari){
+  @if $safari == safari_6_min{
+    @supports (overflow:-webkit-marquee) and (justify-content:inherit){
+      @content;
+    }
+  }
+}
+
+@mixin keyframes($animation-name){
+  @keyframes #{$animation-name}{
+    @content;
+  }
+  @-webkit-keyframes #{$animation-name}{
+    @content;
+  }
+  @-moz-keyframes #{$animation-name}{
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: $str;
+  -moz-animation: $str;
+  animation: $str;
+}
+
+@mixin animation-name($n) {
+  -webkit-animation-name: $n;
+  -moz-animation-name: $n;
+  animation-name: $n;
+}
+
+@mixin animation-iteration($n) {
+  -webkit-animation-iteration-count: $n;
+  -moz-animation-iteration-count: $n;
+  animation-iteration-count: $n;
+}
+
+@mixin animation-timing($n) {
+  -webkit-animation-timing-function: $n;
+  -moz-animation-timing-function: $n;
+  animation-timing-function: $n;
+}
+
+@mixin animation-play-state($n) {
+  -webkit-animation-play-state: $n;
+  -moz-animation-play-state: $n;
+  animation-play-state: $n;
+}
+
+@mixin mediaqueries($res) {
+  @if $res == 1575min {
+    @media only screen and (min-width:1575px){ @content; }
+  }
+  
+  @if $res == 1360min {
+    @media only screen and (min-width:1360px){ @content; }
+  }
+
+  @if $res == 1300max {
+    @media only screen and (min-width:992px) and (max-width:1300px){ @content; }
+  }
+
+  @if $res == 1199max {
+    @media only screen and (min-width:992px) and (max-width:1199px){ @content; }
+  }
+
+  @if $res == 1024max {
+    @media only screen and (min-width:992px) and (max-width:1024px){ @content; }
+  }
+
+  @if $res == 992min {
+    @media only screen and (min-width:992px){ @content; }
+  }
+  
+  @if $res == 991max {
+    @media only screen and (max-width:991px) { @content; }
+  }
+
+  @if $res == 768min {
+    @media only screen and (min-width:768px) { @content; }
+  }
+
+  @if $res == 767max {
+    @media only screen and (max-width:767px) { @content; }
+  }
+  
+  @if $res == 480max {
+    @media only screen and (max-width:480px){ @content; }
+  }
+  @if $res == 320max {
+    @media only screen and (max-width:320px){ @content; }
+  }
+}

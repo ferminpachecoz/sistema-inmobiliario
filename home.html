@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/paper-dashboard.css">
+    <!-- Uncompressed Jquery -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 hidden-xs">
+                    <figure class="logo">
+                        <a title="Pedidos Rednetcorp" href="#" target="_top" class="text-left">
+                            <img src="img/logo.png" class="img-responsive"/>
+                        </a>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                    <div class="row">
+                        <div class="header-right-navbar">
+                            <nav class="navbar contenedor-navbar">
+                                <div class="container-fluid">
+                                  <div class=" navbar-collapse" id="bs-example-navbar-collapse-1">
+                                      <div class="contenedor-navbar-right">
+                                          <ul class="nav navbar-nav">
+                                              <li><div><button class="btn btn-default navbar-btn" id="icono-menu"><span class="glyphicon glyphicon-menu-hamburger"></span></button></div></li>
+                                              <li class="dropdown hidden-xs">
+                                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Español <span class="caret"></span></a>
+                                                  <ul class="dropdown-menu">
+                                                      <li><a href="#">Inglés</a></li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                                          <ul class="nav navbar-nav navbar-right hidden-xs">
+                                              <li>
+                                                  <a href="#">Notificaciones <span class="badge">0</span></a>
+                                              </li>
+                                          
+                                            <li class="dropdown">
+                                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                      <div class="img-usuario-container">
+                                                          <img src="img/usuario-default-2.jpg" alt="" class="img-circle imagen-usuario">
+                                                      </div>
+                                                      
+                                                      <span class="caret"></span>
+                                                  </a>
+                                                  <ul class="dropdown-menu">
+                                                      <li><a href="#">Action</a></li>
+                                                      <li><a href="#">Another action</a></li>
+                                                      <li><a href="#">Something else here</a></li>
+                                                      <li role="separator" class="divider"></li>
+                                                      <li><a href="#">Separated link</a></li>
+                                                  </ul>
+                                            </li>
+                                          </ul>
+                                      </div>
+                                  </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Menu Lateral -->
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 contenedor-sidebar" style="padding-left: 0;">
+                    <div style="margin-top: 15px;">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li role="presentation" class="active"><a href="#">Home</a></li>
+                            <li role="presentation"><a href="#">Profile</a></li>
+                            <li role="presentation"><a href="#">Propiedades</a></li>
+                            <li role="presentation"><a href="#">Dashboard</a></li>
+                            <li role="presentation"><a href="#">Estadisticas</a></li>
+                            <li role="presentation"><a href="#">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Contenedor Mapa -->
+                <div class="contenedor-mapa col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                    <div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li role="presentation" class="active"><a href="#lugar-mapa" aria-controls="lugar-mapa" role="tab" data-toggle="tab">Lugar Mapa</a></li>
+                          <li role="presentation"><a href="#propiedades" aria-controls="propiedades" role="tab" data-toggle="tab">Lista de Propiedades</a></li>
+                        </ul>
+                      
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div role="tabpanel" class="tab-pane active" id="lugar-mapa"><div id="map"></div></div>
+
+                          
+
+                          <div role="tabpanel" class="tab-pane" id="propiedades">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item active">Cras justo odio</a>
+                                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                <a href="#" class="list-group-item">Morbi leo risus</a>
+                                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                <a href="#" class="list-group-item">Lorem Ipsum Dolor</a>
+                                <a href="#" class="list-group-item">Sit Amet Consectetur</a>
+                                <a href="#" class="list-group-item">Adipiscing Elit</a>
+                                <a href="#" class="list-group-item">Rem Eveniet Molestiae</a>
+                                <a href="#" class="list-group-item">Quae Omnis Alias</a>
+                                <a href="#" class="list-group-item">Obcaecati Voluptas Aliquam</a>
+                            </div>
+                          </div>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script>
+    var locations = [
+        { lat: -34.61315, lng: -58.37723 },
+        { lat: -31.4135, lng: -64.18105 },
+        { lat: -32.94682, lng: -60.63932 },
+        { lat: -32.89084, lng: -68.82717 },
+        { lat: -26.82414, lng: -65.2226 },
+        { lat: -34.92145, lng: -57.95453 },
+        { lat: -38.00042, lng: -57.5562 },
+        { lat: -24.7859, lng: -65.41166 },
+        { lat: -31.64881, lng: -60.70868 },
+        { lat: -31.5375, lng: -68.53639 },
+        { lat: -27.46056, lng: -58.98389 },
+        { lat: -27.79511, lng: -64.26149 },
+        { lat: -27.36708, lng: -55.89608 },
+        { lat: -24.19457, lng:  -65.29712 },
+        { lat: -38.71959, lng: -62.27243 },
+        { lat: -31.73271, lng: -60.52897 },
+        { lat: -34.66627, lng: -58.72927 },
+        { lat: -34.51541, lng: -58.76813 },
+        { lat: -34.72904, lng: -58.26374 },
+        { lat: -34.45866, lng: -58.9142 },
+        { lat: -31.42797, lng: -62.08266 },
+        { lat: -22.51637, lng: -63.80131 },
+        { lat: -34.6509, lng: -58.61956 },
+    ];
+    </script>
+
+    <script>
+
+        const contenidoModalMapa = 
+        '<div id="descripcion" class="container">'+
+          '<div class="row">'+
+              '<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">'+
+                  '<img src="img/imagen-default.jpg" alt="Imagen Default" class="img-responsive" style="width: 270px;">'+
+              '</div>'+
+              '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">'+
+                  '<h5>Codigo - Titulo Del Lugar</h5>'+
+                  '<hr>'+
+                  '<p style="font-size: 14px;">Ahora en Linea: <strong>7</strong></p>'+
+                  '<p style="font-size: 14px;">Ultimas 24 horas: <strong>10</strong></p>'+
+                  '<p style="font-size: 14px;">Punto de 1 acceso disponible</p>'+
+                  '<p style="font-size: 14px;">Modelo : AP</p>'+
+                  '<p style="font-size: 14px;">Mac: E0-CB-BC-4A-3A-1A</p>'+
+              '</div>'+
+          '</div>'+
+      '</div>';
+
+    </script>
+
+    </main>
+    <script src="js/main.js"></script>
+    <script src="mapa.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArfS4DYO1dolOMQs7IZOQbSDDCXInLoTs&callback=initMap"></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+
+</body>
+</html>
