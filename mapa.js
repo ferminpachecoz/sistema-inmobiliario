@@ -1,25 +1,90 @@
-// function initMap() {
 
-//   const uluru = { lat: -25.344, lng: 131.036 };
-
-//   const map = new google.maps.Map(document.getElementById("map"), {
-//     zoom: 4,
-//     center: uluru,
-//   });
-
-//   const marker = new google.maps.Marker({
-//     position: uluru,
-//     map: map,
-//   });
-// }
-
+var map;
+var markers = [];
+var infoWindow;
+let panorama;
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 3,
     center: { lat: -38.416097, lng: -63.616672 },
   });
-  const descripcion = document.getElementById('descripcion')
+
+  const infowindow = new google.maps.InfoWindow();
+
+  $.each(locations,function(key,value){
+      var latLng = new google.maps.LatLng(value.lat, value.lng);
+
+      var contentString = value.title;
+
+        marker = new google.maps.Marker({           
+              position: latLng,
+              map: map,
+              contentString: contentString
+        });
+
+        marker.data = value; // adds object to marker object
+        marker.addListener('click', function() {
+          var url_img = (value.streetview != undefined && value.streetview != '') ? value.streetview : 'https://maps.googleapis.com/maps/api/streetview?size=400x400&location=47.5763831,-122.4211769&fov=80&heading=70&pitch=0&key=AIzaSyA3kg7YWugGl1lTXmAmaBGPNhDW9pEh5bo&signature=hg7yTczCuAp4fwIWFySlSr_vq7o=';
+            // read custom data in this.data
+            var contenidoModalMapa = '<div id="descripcion" class="container">';
+            contenidoModalMapa += '<div class="row">';
+           
+            contenidoModalMapa +=    '<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">';
+            contenidoModalMapa +=        '<figure class="img-responsive" style="background-image:url('+url_img+');"></figure>';
+            contenidoModalMapa +=    '</div>';
+            contenidoModalMapa +=    '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">';
+                    if(value.title != undefined && value.title != ''){
+                        contenidoModalMapa +=        '<h6>'+value.title+'</h6>';
+                    }
+            contenidoModalMapa +=        '<hr>';
+            contenidoModalMapa +=        '<p style="font-size: 14px;">Ahora en Linea: <strong>'+value.nowOnline+'</strong></p>';
+            contenidoModalMapa +=        '<p style="font-size: 14px;">Ultimas 24 horas: <strong>'+value.last24hs+'</strong></p>';
+            contenidoModalMapa +=        '<p style="font-size: 14px;">Punto de '+value.pointAccess+' acceso disponible</p>';
+            contenidoModalMapa +=        '<p style="font-size: 14px;">Modelo : '+value.model+'</p>';
+            contenidoModalMapa +=        '<p style="font-size: 14px;">Mac: '+value.mac+'</p>';
+            contenidoModalMapa +=    '</div>';
+            contenidoModalMapa +='</div>';
+            contenidoModalMapa +='</div>';
+
+            infowindow.setContent(contenidoModalMapa);
+
+            infowindow.open(map, this);
+            map.setCenter(this.getPosition());
+        });
+        
+        markers[key] = marker;
+  });
+
+  // Add a marker clusterer to manage the markers.
+  const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
+
+  /*var contenidoModalMapa = '';
+
+  $.each(locations,function(key,value){
+      console.log(value.title);
+
+      contenidoModalMapa += '<div id="descripcion" class="container">';
+      contenidoModalMapa += '<div class="row">';
+
+      contenidoModalMapa +=    '<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">';
+      contenidoModalMapa +=        '<figure class="img-responsive" style="background-image:url(https://maps.googleapis.com/maps/api/streetview?size=400x400&location=47.5763831,-122.4211769&fov=80&heading=70&pitch=0&key=AIzaSyA3kg7YWugGl1lTXmAmaBGPNhDW9pEh5bo&signature=hg7yTczCuAp4fwIWFySlSr_vq7o=)"></figure>';
+      contenidoModalMapa +=    '</div>';
+      contenidoModalMapa +=    '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">';
+              if(value.title != undefined || value.title != ''){
+                  contenidoModalMapa +=        '<h6>'+value.title+'</h6>';
+              }
+      contenidoModalMapa +=        '<hr>';
+      contenidoModalMapa +=        '<p style="font-size: 14px;">Ahora en Linea: <strong>7</strong></p>';
+      contenidoModalMapa +=        '<p style="font-size: 14px;">Ultimas 24 horas: <strong>10</strong></p>';
+      contenidoModalMapa +=        '<p style="font-size: 14px;">Punto de 1 acceso disponible</p>';
+      contenidoModalMapa +=        '<p style="font-size: 14px;">Modelo : AP</p>';
+      contenidoModalMapa +=        '<p style="font-size: 14px;">Mac: E0-CB-BC-4A-3A-1A</p>';
+      contenidoModalMapa +=    '</div>';
+      contenidoModalMapa +='</div>';
+      contenidoModalMapa +='</div>';
+  });
+
   const infoWindow = new google.maps.InfoWindow({
     content: contenidoModalMapa,
     disableAutoPan: true,
@@ -44,30 +109,6 @@ function initMap() {
 
   // Add a marker clusterer to manage the markers.
   const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
-}
+  */
 
-// const locations = [
-//   { lat: -34.61315, lng: -58.37723 },
-//   { lat: -31.4135, lng: -64.18105 },
-//   { lat: -32.94682, lng: -60.63932 },
-//   { lat: -32.89084, lng: -68.82717 },
-//   { lat: -26.82414, lng: -65.2226 },
-//   { lat: -34.92145, lng: -57.95453 },
-//   { lat: -38.00042, lng: -57.5562 },
-//   { lat: -24.7859, lng: -65.41166 },
-//   { lat: -31.64881, lng: -60.70868 },
-//   { lat: -31.5375, lng: -68.53639 },
-//   { lat: -27.46056, lng: -58.98389 },
-//   { lat: -27.79511, lng: -64.26149 },
-//   { lat: -27.36708, lng: -55.89608 },
-//   { lat: -24.19457, lng:  -65.29712 },
-//   { lat: -38.71959, lng: -62.27243 },
-//   { lat: -31.73271, lng: -60.52897 },
-//   { lat: -34.66627, lng: -58.72927 },
-//   { lat: -34.51541, lng: -58.76813 },
-//   { lat: -34.72904, lng: -58.26374 },
-//   { lat: -34.45866, lng: -58.9142 },
-//   { lat: -31.42797, lng: -62.08266 },
-//   { lat: -22.51637, lng: -63.80131 },
-//   { lat: -34.6509, lng: -58.61956 },
-// ];
+}

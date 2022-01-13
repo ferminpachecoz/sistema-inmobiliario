@@ -111,8 +111,6 @@
                         <div class="tab-content">
                           <div role="tabpanel" class="tab-pane active" id="lugar-mapa"><div id="map"></div></div>
 
-                          
-
                           <div role="tabpanel" class="tab-pane" id="propiedades">
                             <div class="list-group">
                                 <a href="#" class="list-group-item active">Cras justo odio</a>
@@ -128,68 +126,46 @@
                                 <a href="#" class="list-group-item">Obcaecati Voluptas Aliquam</a>
                             </div>
                           </div>
+
                         </div>
                       
                     </div>
                 </div>
             </div>
         </div>
-
     <script>
     var locations = [
-        { lat: -34.61315, lng: -58.37723 },
-        { lat: -31.4135, lng: -64.18105 },
-        { lat: -32.94682, lng: -60.63932 },
-        { lat: -32.89084, lng: -68.82717 },
-        { lat: -26.82414, lng: -65.2226 },
-        { lat: -34.92145, lng: -57.95453 },
-        { lat: -38.00042, lng: -57.5562 },
-        { lat: -24.7859, lng: -65.41166 },
-        { lat: -31.64881, lng: -60.70868 },
-        { lat: -31.5375, lng: -68.53639 },
-        { lat: -27.46056, lng: -58.98389 },
-        { lat: -27.79511, lng: -64.26149 },
-        { lat: -27.36708, lng: -55.89608 },
-        { lat: -24.19457, lng:  -65.29712 },
-        { lat: -38.71959, lng: -62.27243 },
-        { lat: -31.73271, lng: -60.52897 },
-        { lat: -34.66627, lng: -58.72927 },
-        { lat: -34.51541, lng: -58.76813 },
-        { lat: -34.72904, lng: -58.26374 },
-        { lat: -34.45866, lng: -58.9142 },
-        { lat: -31.42797, lng: -62.08266 },
-        { lat: -22.51637, lng: -63.80131 },
-        { lat: -34.6509, lng: -58.61956 },
+        { lat: -34.61315, lng: -58.37723, title: 'hola1', streetview: '', nowOnline: '1', last24hs: 12, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -31.4135, lng: -64.18105, title: 'hola2', streetview: '', nowOnline: '2', last24hs: 11, pointAccess: 0, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -32.94682, lng: -60.63932, title: 'hola3', streetview: '', nowOnline: '3', last24hs: 10, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -32.89084, lng: -68.82717, title: 'hola4', streetview: '', nowOnline: '4', last24hs: 9, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -26.82414, lng: -65.2226, title: 'hola5', streetview: '', nowOnline: '5', last24hs: 8, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -34.92145, lng: -57.95453, title: 'hola6', streetview: '', nowOnline: '6', last24hs: 7, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -38.00042, lng: -57.5562, title: 'hola7', streetview: '', nowOnline: '7', last24hs: 6, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -24.7859, lng: -65.41166, title: 'hola8', streetview: '', nowOnline: '8', last24hs: 5, pointAccess: 0, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -31.64881, lng: -60.70868, title: 'hola8', streetview: '', nowOnline: '9', last24hs: 4, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -31.5375, lng: -68.53639, title: 'hola1', streetview: '', nowOnline: '10', last24hs: 3, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -27.46056, lng: -58.98389, title: 'hola1', streetview: '', nowOnline: '11', last24hs: 2, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -27.79511, lng: -64.26149, title: 'hola1', streetview: '', nowOnline: '12', last24hs: 1, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -27.36708, lng: -55.89608, title: 'hola1', streetview: '', nowOnline: '11', last24hs: 2, pointAccess: 0, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -24.19457, lng:  -65.29712, title: 'hola1', streetview: '', nowOnline: '10', last24hs: 3, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -38.71959, lng: -62.27243, title: 'hola2', streetview: '', nowOnline: '9', last24hs: 4, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -31.73271, lng: -60.52897, title: 'hola1', streetview: '', nowOnline: '8', last24hs: 5, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -34.66627, lng: -58.72927, title: 'hola1', streetview: '', nowOnline: '7', last24hs: 6, pointAccess: 0, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -34.51541, lng: -58.76813, title: 'hola1', streetview: '', nowOnline: '6', last24hs: 7, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -34.72904, lng: -58.26374, title: 'hola1', streetview: '', nowOnline: '5', last24hs: 8, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -34.45866, lng: -58.9142, title: 'hola1', streetview: '', nowOnline: '4', last24hs: 9, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -31.42797, lng: -62.08266, title: 'hola1', streetview: '', nowOnline: '3', last24hs: 10, pointAccess: 0, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -22.51637, lng: -63.80131, title: 'hola1', streetview: '', nowOnline: '2', last24hs: 11, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
+        { lat: -34.6509, lng: -58.61956, title: 'hola1', streetview: '', nowOnline: '1', last24hs: 12, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
     ];
-    </script>
-
-    <script>
-
-        const contenidoModalMapa = 
-        '<div id="descripcion" class="container">'+
-          '<div class="row">'+
-              '<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">'+
-                  '<img src="img/imagen-default.jpg" alt="Imagen Default" class="img-responsive" style="width: 270px;">'+
-              '</div>'+
-              '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">'+
-                  '<h5>Codigo - Titulo Del Lugar</h5>'+
-                  '<hr>'+
-                  '<p style="font-size: 14px;">Ahora en Linea: <strong>7</strong></p>'+
-                  '<p style="font-size: 14px;">Ultimas 24 horas: <strong>10</strong></p>'+
-                  '<p style="font-size: 14px;">Punto de 1 acceso disponible</p>'+
-                  '<p style="font-size: 14px;">Modelo : AP</p>'+
-                  '<p style="font-size: 14px;">Mac: E0-CB-BC-4A-3A-1A</p>'+
-              '</div>'+
-          '</div>'+
-      '</div>';
-
     </script>
 
     </main>
     <script src="js/main.js"></script>
     <script src="mapa.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArfS4DYO1dolOMQs7IZOQbSDDCXInLoTs&callback=initMap"></script>
     <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArfS4DYO1dolOMQs7IZOQbSDDCXInLoTs&callback=initMap"></script>
 
 </body>
 </html>
