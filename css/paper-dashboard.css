@@ -303,15 +303,61 @@ header div .nav {
   .img-usuario-container .imagen-usuario {
     width: 25px; }
 
+.contenedor-mapa .tab-content #lugar-mapa p {
+  margin: 15px;
+  font-size: 14px; }
+.contenedor-mapa .tab-content #propiedades p {
+  margin: 15px;
+  font-size: 14px; }
+.contenedor-mapa .tab-content #propiedades table {
+  margin: 0 15px; }
+  .contenedor-mapa .tab-content #propiedades table tr td {
+    color: grey; }
+    .contenedor-mapa .tab-content #propiedades table tr td .barra-iconos a .icono-editar {
+      display: none;
+      padding: 7px;
+      background-color: orangered;
+      color: white; }
+    .contenedor-mapa .tab-content #propiedades table tr td .barra-iconos .contenedor-icono-opciones {
+      display: inline;
+      padding-bottom: 5px;
+      padding-top: 8px;
+      padding-left: 6px;
+      padding-right: 6px; }
+      .contenedor-mapa .tab-content #propiedades table tr td .barra-iconos .contenedor-icono-opciones .icono-opciones {
+        color: #39c;
+        padding-right: 3.5px;
+        padding-left: 2.5px;
+        padding-top: 3px;
+        padding-bottom: 2.5px;
+        border-radius: 50%; }
+  .contenedor-mapa .tab-content #propiedades table tr th {
+    color: #575656;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important; }
+
 #map {
   height: 500px;
   width: 100%; }
+  #map #descripcion {
+    width: 100%;
+    min-width: 600px;
+    padding: 0; }
+    #map #descripcion > .row {
+      margin: 0; }
+      #map #descripcion > .row > [class*="col-"] {
+        padding: 0; }
+    #map #descripcion figure {
+      width: 100%;
+      height: 300px; }
+  #map .gm-style .gm-style-iw-c {
+    padding: 0 !important;
+    max-height: 295px !important; }
 
 .contenedor-sidebar {
-  height: 100vh; }
-
-.contenedor-icono-menu button span {
-  color: grey; }
+  height: 100vh;
+  padding-right: 0;
+  padding-left: 0; }
 
 .header-right-navbar {
   border-bottom: 1px solid rgba(158, 157, 157, 0.753);

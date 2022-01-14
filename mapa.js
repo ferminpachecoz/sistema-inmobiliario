@@ -27,22 +27,32 @@ function initMap() {
         marker.addListener('click', function() {
           var url_img = (value.streetview != undefined && value.streetview != '') ? value.streetview : 'https://maps.googleapis.com/maps/api/streetview?size=400x400&location=47.5763831,-122.4211769&fov=80&heading=70&pitch=0&key=AIzaSyA3kg7YWugGl1lTXmAmaBGPNhDW9pEh5bo&signature=hg7yTczCuAp4fwIWFySlSr_vq7o=';
             // read custom data in this.data
-            var contenidoModalMapa = '<div id="descripcion" class="container">';
+            var contenidoModalMapa = '<div id="descripcion" class="container-fluid">';
             contenidoModalMapa += '<div class="row">';
            
-            contenidoModalMapa +=    '<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">';
-            contenidoModalMapa +=        '<figure class="img-responsive" style="background-image:url('+url_img+');"></figure>';
+            contenidoModalMapa +=    '<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">';
+            contenidoModalMapa +=        '<figure style="background-image:url('+url_img+');"></figure>';
             contenidoModalMapa +=    '</div>';
-            contenidoModalMapa +=    '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">';
+            contenidoModalMapa +=    '<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 text-center">';
                     if(value.title != undefined && value.title != ''){
                         contenidoModalMapa +=        '<h6>'+value.title+'</h6>';
                     }
-            contenidoModalMapa +=        '<hr>';
-            contenidoModalMapa +=        '<p style="font-size: 14px;">Ahora en Linea: <strong>'+value.nowOnline+'</strong></p>';
-            contenidoModalMapa +=        '<p style="font-size: 14px;">Ultimas 24 horas: <strong>'+value.last24hs+'</strong></p>';
-            contenidoModalMapa +=        '<p style="font-size: 14px;">Punto de '+value.pointAccess+' acceso disponible</p>';
-            contenidoModalMapa +=        '<p style="font-size: 14px;">Modelo : '+value.model+'</p>';
-            contenidoModalMapa +=        '<p style="font-size: 14px;">Mac: '+value.mac+'</p>';
+                        contenidoModalMapa +=        '<hr>';
+                    if(value.nowOnline != undefined && value.nowOnline != ''){
+                        contenidoModalMapa +=        '<p style="font-size: 14px;">Ahora en Linea: <strong>'+value.nowOnline+'</strong></p>';
+                    }
+                    if(value.last24hs != undefined && value.last24hs != ''){
+                        contenidoModalMapa +=        '<p style="font-size: 14px;">Ultimas 24 horas: <strong>'+value.last24hs+'</strong></p>';
+                    }
+                    if(value.pointAccess != undefined && value.pointAccess != ''){
+                        contenidoModalMapa +=        '<p style="font-size: 14px;">Punto de '+value.pointAccess+' acceso disponible</p>';
+                    }
+                    if (value.model != undefined && value.model != '') {
+                        contenidoModalMapa +=        '<p style="font-size: 14px;">Modelo : '+value.model+'</p>';
+                    }
+                    if (value.mac != undefined && value.mac != '') {
+                        contenidoModalMapa +=        '<p style="font-size: 14px;">Mac: '+value.mac+'</p>';
+                    }
             contenidoModalMapa +=    '</div>';
             contenidoModalMapa +='</div>';
             contenidoModalMapa +='</div>';

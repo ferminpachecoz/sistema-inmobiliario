@@ -143,9 +143,87 @@ header{
     
 }
 
+
+
+.contenedor-mapa{
+    .tab-content{
+        #lugar-mapa{
+            p{
+                margin: 15px;
+                font-size: 14px;
+            }
+        }
+        #propiedades{
+            p{
+                margin: 15px;
+                font-size: 14px;
+            }
+            table{
+                margin: 0 15px;
+                tr{
+                    td{
+                        color: grey;
+                        .barra-iconos{
+                                a{
+                                    .icono-editar{
+                                        display: none;
+                                        padding: 7px;
+                                        background-color: orangered;
+                                        color: white;
+                                    }
+                                }
+                            
+                            
+                            .contenedor-icono-opciones{
+                                display: inline;
+                                padding-bottom: 5px;
+                                padding-top: 8px;
+                                padding-left: 6px;
+                                padding-right: 6px;
+                                .icono-opciones{
+                                    color: #39c;
+                                    padding-right: 3.5px;
+                                    padding-left: 2.5px;
+                                    padding-top: 3px;
+                                    padding-bottom: 2.5px;
+                                    border-radius: 50%;
+                                }
+                            }
+                        } 
+                    }
+                    th{
+                        color: rgb(87, 86, 86);
+                        padding-top: 20px !important;
+                        padding-bottom: 20px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
 #map{
     height: 500px;
     width: 100%;
+    #descripcion{
+        width: 100%;
+        min-width: 600px;
+        padding: 0;
+        &>.row{
+            margin:0;
+            &>[class*="col-"]{
+                padding: 0;
+            }
+        }
+        figure{
+            width: 100%;
+            height: 300px;
+        }
+    }
+    .gm-style .gm-style-iw-c{
+        padding: 0 !important;
+        max-height: 295px!important;
+    }
 }
 
 .contenedor-sidebar{
@@ -161,6 +239,7 @@ header{
         margin-bottom: 0px;
     }
 }
+
 
 
 

@@ -64,10 +64,10 @@
                                                   </a>
                                                   <ul class="dropdown-menu">
                                                       <li><a href="#">Action</a></li>
-                                                      <li><a href="#">Another action</a></li>
-                                                      <li><a href="#">Something else here</a></li>
+                                                      <li><a href="#">Ayuda y soporte técnico</a></li>
+                                                      <li><a href="#">Mi cuenta</a></li>
                                                       <li role="separator" class="divider"></li>
-                                                      <li><a href="#">Separated link</a></li>
+                                                      <li><a href="#">Cerrar Sesión</a></li>
                                                   </ul>
                                             </li>
                                           </ul>
@@ -86,20 +86,20 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- Menu Lateral -->
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 contenedor-sidebar" style="padding-left: 0;">
+                <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 contenedor-sidebar" style="padding-left: 0;">
                     <div style="margin-top: 15px;">
                         <ul class="nav nav-pills nav-stacked">
                             <li role="presentation" class="active"><a href="#">Home</a></li>
-                            <li role="presentation"><a href="#">Profile</a></li>
-                            <li role="presentation"><a href="#">Propiedades</a></li>
                             <li role="presentation"><a href="#">Dashboard</a></li>
+                            <li role="presentation"><a href="#">Propiedades</a></li>
                             <li role="presentation"><a href="#">Estadisticas</a></li>
-                            <li role="presentation"><a href="#">Cerrar Sesión</a></li>
+                            <li role="presentation"><a href="#">Profile</a></li>
+                            <li role="presentation"><a href="#">Ajustes</a></li>
                         </ul>
                     </div>
                 </div>
                 <!-- Contenedor Mapa -->
-                <div class="contenedor-mapa col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                <div class="contenedor-mapa col-xs-9 col-sm-10 col-md-10 col-lg-10">
                     <div>
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
@@ -109,22 +109,45 @@
                       
                         <!-- Tab panes -->
                         <div class="tab-content">
-                          <div role="tabpanel" class="tab-pane active" id="lugar-mapa"><div id="map"></div></div>
+                          <div role="tabpanel" class="tab-pane active" id="lugar-mapa"><p>Localización y estado de su propiedad</p><div id="map"></div></div>
 
                           <div role="tabpanel" class="tab-pane" id="propiedades">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item active">Cras justo odio</a>
-                                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                                <a href="#" class="list-group-item">Morbi leo risus</a>
-                                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                                <a href="#" class="list-group-item">Vestibulum at eros</a>
-                                <a href="#" class="list-group-item">Lorem Ipsum Dolor</a>
-                                <a href="#" class="list-group-item">Sit Amet Consectetur</a>
-                                <a href="#" class="list-group-item">Adipiscing Elit</a>
-                                <a href="#" class="list-group-item">Rem Eveniet Molestiae</a>
-                                <a href="#" class="list-group-item">Quae Omnis Alias</a>
-                                <a href="#" class="list-group-item">Obcaecati Voluptas Aliquam</a>
-                            </div>
+                            <p>Localizacion y estado de su propiedad</p>
+                            <hr>
+                            <table class="table table-hover table-responsive">
+                                <tr>
+                                    <th class="col-xs-7">Ubicacion</th>
+                                    <th class="col-xs-2">Usuarios en linea</th>
+                                    <th class="col-xs-2">Estado</th>
+                                    <th class="col-xs-1"></th>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-7"><span class="glyphicon glyphicon-map-marker"></span> La plata</td>
+                                    <td class="col-xs-2">0</td>
+                                    <td class="col-xs-2">Offline</td>
+                                    <td class="col-xs-1">
+                                        <div class="barra-iconos">
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Editar"><span class="glyphicon glyphicon-pencil icono-editar"></span></a>
+                                            <div class="contenedor-icono-opciones">
+                                                <a href="#"><span class="glyphicon glyphicon-option-horizontal icono-opciones"></span></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-7"><span class="glyphicon glyphicon-map-marker"></span>San Francisco</td>
+                                    <td class="col-xs-2">2</td>
+                                    <td class="col-xs-2">No hardware</td>
+                                    <td class="col-xs-1">
+                                        <div class="barra-iconos">
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Editar"><span class="glyphicon glyphicon-pencil icono-editar"></span></a>
+                                            <div class="contenedor-icono-opciones">
+                                                <a href="#"><span class="glyphicon glyphicon-option-horizontal icono-opciones"></span></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
                           </div>
 
                         </div>
@@ -160,7 +183,7 @@
         { lat: -34.6509, lng: -58.61956, title: 'hola1', streetview: '', nowOnline: '1', last24hs: 12, pointAccess: 1, model: 'AP', mac: 'E0-CB-BC-4A-3A-1A'},
     ];
     </script>
-
+    
     </main>
     <script src="js/main.js"></script>
     <script src="mapa.js"></script>
